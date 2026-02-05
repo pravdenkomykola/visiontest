@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eye Test Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">VISION</div>
+</header>
+
+<section class="hero" id="mainPage">
+  <h1>Eye Test Online</h1>
+  <p>Free near-vision screening using a Tumbling E chart.</p>
+  <div class="actions">
+    <button onclick="startVisionTest()">Start Vision Test Online</button>
+    <button onclick="startAstigmatism()">Check for signs of astigmatism</button>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section id="qaSection">
+  <h2>QUESTION & ANSWER</h2>
+
+  <div class="qa-item">
+    <div class="qa-text">
+      <p class="q">What is a Tumbling E vision test?</p>
+      <p class="a">
+        The Tumbling E chart uses only the letter E rotated in different directions.
+        The letter becomes smaller step by step.
+      </p>
+    </div>
+    <img src="images/qa1.png" alt="Tumbling E example">
+  </div>
+
+  <div class="qa-item">
+    <div class="qa-text">
+      <p class="q">Do I need glasses during the test?</p>
+      <p class="a">
+        It is recommended to take the test without glasses unless otherwise instructed.
+      </p>
+    </div>
+    <img src="images/qa2.png">
+  </div>
+
+  <div class="qa-item">
+    <div class="qa-text">
+      <p class="q">How far should the device be?</p>
+      <p class="a">
+        Keep the device at arm’s length for correct scale.
+      </p>
+    </div>
+    <img src="images/qa3.png">
+  </div>
+
+  <div class="qa-item">
+    <div class="qa-text">
+      <p class="q">Can I use a phone or tablet?</p>
+      <p class="a">
+        Yes. The test works on mobile devices as well.
+      </p>
+    </div>
+    <img src="images/qa4.png">
+  </div>
+
+  <div class="qa-item">
+    <div class="qa-text">
+      <p class="q">Is this a medical diagnosis?</p>
+      <p class="a">
+        No. This is a screening test, not a replacement for an eye doctor.
+      </p>
+    </div>
+    <img src="images/qa5.png">
+  </div>
+</section>
+
+<div id="testWrapper">
+  <div class="chart-frame" id="app"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
