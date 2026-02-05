@@ -1,111 +1,188 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Eye Test Online</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <div class="logo">VISION</div>
-  <button class="home-btn" onclick="goHome()">Home</button>
-</header>
-
-<section class="hero" id="mainPage">
-  <h1>Eye Test Online</h1>
-  <p>Free near-vision screening using a Tumbling E chart.</p>
-  <div class="actions">
-    <button onclick="startVisionTest()">Start Vision Test Online</button>
-    <button onclick="startAstigmatism()">Check for signs of astigmatism</button>
-  </div>
-</section>
-
-<section id="qaSection">
-  <h2>QUESTION & ANSWER</h2>
-
-  <div class="qa-item">
-    <div class="qa-text">
-      <p class="q">What are Tumbling E eye chart tests?</p>
-      <p class="a">A tumbling E chart uses only the letter E rotated in different directions.</p>
-    </div>
-    <div class="qa-img"></div>
-  </div>
-
-  <div class="qa-item">
-    <div class="qa-text">
-      <p class="q">What does 2/10 vision mean?</p>
-      <p class="a">You see at 2 feet what a person with normal vision sees at 10 feet.</p>
-    </div>
-    <div class="qa-img"></div>
-  </div>
-
-  <div class="qa-item">
-    <div class="qa-text">
-      <p class="q">What is myopia?</p>
-      <p class="a">Nearsightedness makes distant objects blurry.</p>
-    </div>
-    <div class="qa-img"></div>
-  </div>
-
-  <div class="qa-item">
-    <div class="qa-text">
-      <p class="q">What is hyperopia?</p>
-      <p class="a">Farsightedness makes close objects blurry.</p>
-    </div>
-    <div class="qa-img"></div>
-  </div>
-
-  <div class="qa-item">
-    <div class="qa-text">
-      <p class="q">What is astigmatism?</p>
-      <p class="a">Astigmatism is caused by an irregular eye shape.</p>
-    </div>
-    <div class="qa-img"></div>
-  </div>
-</section>
-
-<!-- TEST WRAPPER -->
-<div id="testWrapper">
-  <div class="chart-frame" id="app">
-
-    <!-- ===== VISION PREP ===== -->
-    <div class="page active" id="vision-1">
-      <div class="face">
-        <div class="eye"><div class="pupil"></div><div class="eyelid"></div></div>
-        <div class="eye right"><div class="pupil"></div><div class="eyelid"></div></div>
-      </div>
-      <p><b>Tumbling E Vision Test</b><br>Take off your glasses</p>
-      <button class="button" onclick="showVisionPrep(2)">Next</button>
-    </div>
-
-    <div class="page" id="vision-2">
-      <p>Increase screen brightness<br>Press F11</p>
-      <button class="button" onclick="showVisionPrep(3)">Next</button>
-    </div>
-
-    <div class="page" id="vision-3">
-      <p>Keep device at arm’s length</p>
-      <button class="button" onclick="showVisionPrep(4)">Next</button>
-    </div>
-
-    <div class="page" id="vision-4">
-      <div class="face">
-        <div class="eye"><div class="pupil"></div><div class="eyelid"></div></div>
-        <div class="eye right"><div class="pupil"></div><div class="eyelid"></div></div>
-      </div>
-      <p>Cover your <b>left eye</b></p>
-      <button class="button" onclick="startTest('left')">Start Test</button>
-    </div>
-
-  </div>
-</div>
-
-<script src="js/script.js"></script>
-</body>
-</html>
-<script src="js/script.js"></script>
-</body>
-</html>
-
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<title>Eye Test Online</title>
+-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+-<link rel="stylesheet" href="css/style.css">
+-</head>
+-<body>
+-
+-<header>
+-  <div class="logo">VISION</div>
+-  <button class="home-btn" onclick="goHome()">Home</button>
+-</header>
+-
+-<section class="hero" id="mainPage">
+-  <h1>Eye Test Online</h1>
+-  <p>Free near-vision screening using a Tumbling E chart.</p>
+-  <div class="actions">
+-    <button onclick="startVisionTest()">Start Vision Test Online</button>
+-    <button onclick="startAstigmatism()">Check for signs of astigmatism</button>
+-  </div>
+-</section>
+-
+-<section id="qaSection">
+-  <h2>QUESTION & ANSWER</h2>
+-
+-  <div class="qa-item">
+-    <div class="qa-text">
+-      <p class="q">What are Tumbling E eye chart tests?</p>
+-      <p class="a">A tumbling E chart uses only the letter E rotated in different directions.</p>
+-    </div>
+-    <div class="qa-img"></div>
+-  </div>
+-
+-  <div class="qa-item">
+-    <div class="qa-text">
+-      <p class="q">What does 2/10 vision mean?</p>
+-      <p class="a">You see at 2 feet what a person with normal vision sees at 10 feet.</p>
+-    </div>
+-    <div class="qa-img"></div>
+-  </div>
+-
+-  <div class="qa-item">
+-    <div class="qa-text">
+-      <p class="q">What is myopia?</p>
+-      <p class="a">Nearsightedness makes distant objects blurry.</p>
+-    </div>
+-    <div class="qa-img"></div>
+-  </div>
+-
+-  <div class="qa-item">
+-    <div class="qa-text">
+-      <p class="q">What is hyperopia?</p>
+-      <p class="a">Farsightedness makes close objects blurry.</p>
+-    </div>
+-    <div class="qa-img"></div>
+-  </div>
+-
+-  <div class="qa-item">
+-    <div class="qa-text">
+-      <p class="q">What is astigmatism?</p>
+-      <p class="a">Astigmatism is caused by an irregular eye shape.</p>
+-    </div>
+-    <div class="qa-img"></div>
+-  </div>
+-</section>
+-
+-<!-- TEST WRAPPER -->
+-<div id="testWrapper">
+-  <div class="chart-frame" id="app">
+-
+-    <!-- ===== VISION PREP ===== -->
+-    <div class="page active" id="vision-1">
+-      <div class="face">
+-        <div class="eye"><div class="pupil"></div><div class="eyelid"></div></div>
+-        <div class="eye right"><div class="pupil"></div><div class="eyelid"></div></div>
+-      </div>
+-      <p><b>Tumbling E Vision Test</b><br>Take off your glasses</p>
+-      <button class="button" onclick="showVisionPrep(2)">Next</button>
+-    </div>
+-
+-    <div class="page" id="vision-2">
+-      <p>Increase screen brightness<br>Press F11</p>
+-      <button class="button" onclick="showVisionPrep(3)">Next</button>
+-    </div>
+-
+-    <div class="page" id="vision-3">
+-      <p>Keep device at arm’s length</p>
+-      <button class="button" onclick="showVisionPrep(4)">Next</button>
+-    </div>
+-
+-    <div class="page" id="vision-4">
+-      <div class="face">
+-        <div class="eye"><div class="pupil"></div><div class="eyelid"></div></div>
+-        <div class="eye right"><div class="pupil"></div><div class="eyelid"></div></div>
+-      </div>
+-      <p>Cover your <b>left eye</b></p>
+-      <button class="button" onclick="startTest('left')">Start Test</button>
+-    </div>
+-
+-  </div>
+-</div>
+-
+-<script src="js/script.js"></script>
+-</body>
+-</html>
+-<script src="js/script.js"></script>
+-</body>
+-</html>
+-
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<title>Eye Test Online</title>
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<link rel="stylesheet" href="css/style.css">
++</head>
++<body>
++<header>
++  <div>VISION</div>
++  <div class="header-buttons">
++    <div class="home-btn" onclick="goHome()">Home</div>
++  </div>
++</header>
++<section class="hero" id="mainPage">
++  <h1>Eye Test Online</h1>
++  <p>Free near-vision screening using a Tumbling E chart.</p>
++  <div class="actions">
++    <button onclick="startVisionTest()">Start Vision Test Online</button>
++    <button onclick="startAstigmatism()">Check for signs of astigmatism</button>
++  </div>
++</section>
++
++<!-- ===== Q&A ONLY MAIN PAGE ===== -->
++<section id="qaSection">
++  <h2>QUESTION & ANSWER</h2>
++  <div class="qa-item">
++    <p class="q">What are eye Tumbling E chart test?</p>
++    <p class="a"> In this chart you see only E letters which each time comes smaller. In the original and correct version have standart letters with the 20 feet distance. </p>
++  </div>
++  <div class="qa-item">
++    <p class="q">Q2: Do I need glasses?</p>
++    <p class="a">A: You can take the test with or without glasses, but better without.</p>
++  </div>
++  <div class="qa-item">
++    <p class="q">Q3: How far should I hold the device?</p>
++    <p class="a">A: Keep it about arm’s length away from your eyes.</p>
++  </div>
++  <div class="qa-item">
++    <p class="q">Q4: Can I take it on mobile?</p>
++    <p class="a">A: Yes, it works on phones and tablets too.</p>
++  </div>
++  <div class="qa-item">
++    <p class="q">Q5: Is it accurate?</p>
++    <p class="a">A: It’s a screening test, not a professional diagnosis.</p>
++  </div>
++</section>
++
++<div id="testWrapper">
++  <div class="chart-frame" id="app">
++    <div class="page active" id="page1">
++      <p><b>Tumbling E Vision Test</b><br>Prepare for the test<br>Take off your glasses</p>
++      <button class="button" onclick="nextPage(2)">Next</button>
++    </div>
++    <div class="page" id="page2">
++      <p>Increase screen brightness<br>Press F11</p>
++      <button class="button" onclick="nextPage(3)">Next</button>
++    </div>
++    <div class="page" id="page3">
++      <p>Keep device at arm’s length</p>
++      <button class="button" onclick="nextPage(4)">Next</button>
++    </div>
++    <div class="page" id="page4">
++      <div class="face">
++        <div class="eye"><div class="pupil"></div><div class="eyelid"></div></div>
++        <div class="eye right"><div class="pupil"></div><div class="eyelid"></div></div>
++      </div>
++      <p>Cover your <b>left eye</b></p>
++      <button class="button" onclick="startTest('left')">Start Test</button>
++    </div>
++  </div>
++</div>
++
++<script src="js/script.js"></script>
++</body>
++</html>
