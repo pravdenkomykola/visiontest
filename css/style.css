@@ -1,0 +1,155 @@
+:root{
+  --btn:#1034a6;
+  --text:#2b2b2b;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+}
+
+header{
+  height:72px;
+  padding:0 48px;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid #eee;
+}
+
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1{font-size:56px}
+.hero p{font-size:20px;max-width:700px;margin:20px auto}
+
+.actions{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+}
+
+button{
+  background:var(--btn);
+  border:none;
+  padding:14px 32px;
+  color:#fff;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* Q&A */
+#qaSection{
+  max-width:900px;
+  margin:80px auto;
+}
+
+#qaSection h2{
+  font-size:42px;
+  letter-spacing:10px;
+  margin-bottom:60px;
+}
+
+.qa-item{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  margin-bottom:60px;
+}
+
+.qa-item img{
+  width:220px;
+  height:auto;
+  object-fit:contain;
+}
+
+.qa-text{
+  flex:1;
+}
+
+.q{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.a{
+  font-size:22px;
+}
+
+/* TEST */
+#testWrapper{
+  display:none;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.chart-frame{
+  width:520px;
+  height:650px;
+  padding:28px;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  display:flex;
+  flex-direction:column;
+}
+
+.face{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+}
+
+.eye{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  border:3px solid #1f2a33;
+  position:relative;
+}
+
+.pupil{
+  width:18px;
+  height:18px;
+  background:#1f2a33;
+  border-radius:50%;
+  position:absolute;
+  top:26px;
+  left:26px;
+}
+
+#eContainer{
+  height:200px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.controls{
+  display:grid;
+  grid-template-columns:repeat(2,90px);
+  gap:18px;
+  justify-content:center;
+}
+
+.e-button{
+  width:90px;
+  height:90px;
+  border:1px solid #999;
+  border-radius:12px;
+  cursor:pointer;
+  background:#fff;
+}
+
+.bar{
+  position:absolute;
+  background:#000;
+}
+
+.astig-svg{
+  width:300px;
+  height:300px;
+}
