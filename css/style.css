@@ -11,14 +11,26 @@ body{
   color:var(--text);
 }
 
+/* HEADER */
 header{
   height:72px;
   padding:0 48px;
   display:flex;
+  justify-content:space-between;
   align-items:center;
   border-bottom:1px solid #eee;
 }
 
+.home-btn{
+  background:var(--btn);
+  color:#fff;
+  border:none;
+  padding:10px 24px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* HERO */
 .hero{
   text-align:center;
   padding:120px 20px;
@@ -27,58 +39,43 @@ header{
 .hero h1{font-size:56px}
 .hero p{font-size:20px;max-width:700px;margin:20px auto}
 
-.actions{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-}
-
-button{
+.actions button{
   background:var(--btn);
-  border:none;
-  padding:14px 32px;
   color:#fff;
+  border:none;
+  padding:16px 36px;
+  font-size:18px;
   border-radius:30px;
   cursor:pointer;
+  margin:0 8px;
 }
 
 /* Q&A */
 #qaSection{
   max-width:900px;
-  margin:80px auto;
+  margin:80px 0 60px 50px;
 }
 
 #qaSection h2{
   font-size:42px;
-  letter-spacing:10px;
-  margin-bottom:60px;
+  letter-spacing:8px;
 }
 
 .qa-item{
   display:flex;
   gap:40px;
-  align-items:flex-start;
-  margin-bottom:60px;
+  margin-bottom:40px;
 }
 
-.qa-item img{
-  width:220px;
-  height:auto;
-  object-fit:contain;
-}
-
-.qa-text{
+.qa-text{flex:2}
+.qa-img{
   flex:1;
+  height:120px;
+  background:#eee;
 }
 
-.q{
-  font-size:24px;
-  font-weight:bold;
-}
-
-.a{
-  font-size:22px;
-}
+.q{font-size:24px;font-weight:bold}
+.a{font-size:22px}
 
 /* TEST */
 #testWrapper{
@@ -92,37 +89,47 @@ button{
   width:520px;
   height:650px;
   padding:28px;
-  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
   display:flex;
   flex-direction:column;
-}
-
-.face{
-  display:flex;
-  gap:40px;
+  align-items:center;
   justify-content:center;
 }
 
+/* EYES */
+.face{display:flex;gap:40px;margin-bottom:20px}
+
 .eye{
-  width:70px;
-  height:70px;
+  width:70px;height:70px;
   border-radius:50%;
   border:3px solid #1f2a33;
   position:relative;
 }
 
 .pupil{
-  width:18px;
-  height:18px;
+  width:18px;height:18px;
   background:#1f2a33;
   border-radius:50%;
   position:absolute;
-  top:26px;
-  left:26px;
+  top:26px;left:26px;
 }
 
+.eyelid{
+  position:absolute;
+  inset:0;
+  background:#edf2f6;
+  animation:blink 4s infinite;
+  transform-origin:top;
+}
+
+@keyframes blink{
+  0%,90%,100%{transform:scaleY(0)}
+  45%,55%{transform:scaleY(1)}
+}
+
+/* VISION TEST */
 #eContainer{
-  height:200px;
+  flex:1;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -132,24 +139,19 @@ button{
   display:grid;
   grid-template-columns:repeat(2,90px);
   gap:18px;
-  justify-content:center;
 }
 
 .e-button{
-  width:90px;
-  height:90px;
+  width:90px;height:90px;
   border:1px solid #999;
   border-radius:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   cursor:pointer;
-  background:#fff;
 }
 
-.bar{
-  position:absolute;
-  background:#000;
-}
+.e{position:relative}
+.bar{position:absolute;background:#000}
 
-.astig-svg{
-  width:300px;
-  height:300px;
-}
+.astig-svg{width:300px;height:300px}
